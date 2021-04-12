@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>かるたを体験！</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h1 id="title">英語で、かるた！</h1>
+      <!-- <button>スタート</button> -->
+      <div id="btn">start</div>
+
+      <div id="showClue">
+        <!--読句表示ボックス -->
+        <form action="#" name="read">
+          <input
+            type="text"
+            name="field"
+            id="box"
+            size="60"
+            placeholder="ここに読み句が表示されます"
+          />
+        </form>
+      </div>
+      
+      <div class="showEfuda">
+        <!--絵札画像 -->
+      <ul id="fuda">
+        
+      </ul>
+       </div>
+      <!--取札結果 -->
+      <section id="touch" class="hidden">
+        <p id="touchMessage"></p>
+        <img id="touchImage" src="" />
+        <div id="touchBtn">次？</div>
+      </section>
+
+      <!--結果表示 -->
+      <section id="result" class="hidden">
+        <p id="maisu"></p>
+        <p id="resultMessage"></p>
+        <img id="resultImage" src="" />
+        <a href="">もう1回?</a>
+      </section>
+     
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
