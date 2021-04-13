@@ -147,11 +147,11 @@
       image.classList.add("erase"); */
       
       //機能しない All付き
-      const image = document.querySelector("img[src+karuta[no].efuda]");
-      image.classList.add("erase");  
-      //機能しない All無し
-      /* const image = document.querySelector("img[src ='"+karuta[no].efuda+"']");
+      /*const image = document.querySelectorAll("img[src+karuta[no].efuda]");
       image.classList.add("erase");  */
+      //機能しない All無し
+      const image = document.querySelector("img[src ='"+karuta[no].efuda+"']");
+      image.classList.add("erase"); 
       
       //最初から順番に消していくだけ。
       //document.querySelectorAll("img")[no].style.visibility = "hidden";
