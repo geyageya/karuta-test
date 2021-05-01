@@ -8,10 +8,11 @@
   <body>
     <section class="container">
       <h1 id="title">英語で、かるた！</h1>
-      <!-- <button>スタート</button> -->
+      
       <div id="btn">start</div>
 
       <div id="showClue">
+      
         <!--読句表示ボックス -->
         <form action="#" name="read">
           <input
@@ -19,22 +20,39 @@
             name="field"
             id="box"
             size="60"
+            margin="50"
             placeholder="ここに読み句が表示されます"
           />
         </form>
       </div>
-      
       <div class="showEfuda">
-        <!--絵札画像 -->
-      <ul id="fuda">
+      <!--絵札画像 ul, li使用-->
+      <!-- <ul id="fuda">   </ul> -->
+       <!--絵札画像 div, div使用-->
+      <div id="fuda"> 
         
-      </ul>
+      </div>
+      
+      <!--取札画像(Player用) -->
+       <div id="torifuda">
+       
+       <ul id="win">
+
+        </ul>
        </div>
+
+      <!--取札画像(相手用) -->
+      <div id="torifuda2">
+        <ul id="win2">
+       
+         </ul>
+        </div>
+
       <!--取札結果 -->
       <section id="touch" class="hidden">
         <p id="touchMessage"></p>
         <img id="touchImage" src="" />
-        <div id="touchBtn">次？</div>
+        <div id="touchBtn"></div>
       </section>
 
       <!--結果表示 -->
@@ -43,8 +61,29 @@
         <p id="resultMessage"></p>
         <img id="resultImage" src="" />
         <a href="">もう1回?</a>
+        
       </section>
-     
+      <audio id="scene" preload="auto">
+        <source src="sounds/scene.mp3" type="audio/mp3">
+      </audio>
+      <audio id="boyon" preload="auto">
+        <source src="sounds/boyon.mp3" type="audio/mp3">
+      </audio>
+      <audio id="clap" preload="auto">
+        <source src="sounds/clap.mp3" type="audio/mp3">
+      </audio>
+      <audio id="chiin" preload="auto">
+        <source src="sounds/chiin.mp3" type="audio/mp3">
+      </audio>
+      <audio id="pat" preload="auto">
+        <source src="sounds/pat.mp3" type="audio/mp3">
+      </audio>
+      <audio id="ippon" preload="auto">
+        <source src="sounds/ippon.mp3" type="audio/mp3">
+      </audio>
+      <audio id="rappa" preload="auto">
+        <source src="sounds/rappa.mp3" type="audio/mp3">
+      </audio>
     </section>
     <script src="js/main.js"></script>
   </body>
