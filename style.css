@@ -1,0 +1,270 @@
+/* @media (min-width: 600px) and (max-width: 800px){
+  body{
+   background: skyblue;
+  }
+ } */
+
+body {
+  background: grey;
+}
+
+h1 {
+  color: #979797;
+}
+
+.erase{
+  visibility: hidden; 
+}
+
+/* 画像の拡大*/
+  img.large { 
+  zoom: 1.5; 
+}
+/* 画像の縮小 */
+  img.small { 
+  /* zoom: 30%; 
+ */
+/* margin: 20px; */
+padding: 20px;
+width: 90px; 
+height:90px; 
+object-fit: contain;
+}
+
+/* 画像サイズ変更 */
+img.size20{
+
+width: 20px; 
+height:20px; 
+object-fit: contain;
+}
+
+
+.container {
+  width: 450px;
+  height:600px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Verdana, sans-serif;
+  position: relative;
+}
+
+#btn {
+  width: 100px;
+  background: #3498db;;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#btn:hover {
+  opacity: 0.8;
+}
+
+.showClue {
+  width: 450px;
+  margin: 6px auto;
+  background: #fff;
+  padding-bottom: 10px;
+}
+
+/* 絵札置き場：全体 */
+#fuda {
+  top: 80px;
+  position:relative;
+  
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(2, 150px);
+
+  justify-content: center;
+  align-content: center;
+
+  justify-items: center;
+  align-items: start;
+}
+
+/* 個々の絵札置き場（絵・hand, hand2が重なっている） */
+.div0 {
+  display: grid;
+  grid-template-columns:　150px, 50px ; 
+  grid-template-rows: 150px, 50px;
+}
+
+/* 絵札入れるdiv */
+.div1{
+  grid-row: 1;
+  grid-column:1;
+    
+}
+
+/* 手(hand)を入れるdiv */
+.div2{
+  grid-row: 1;
+  grid-column:1;
+  
+}
+/* 相手の手(hand2)を入れるdiv */
+.div3{
+  grid-row: 1;
+  grid-column: 1;
+} 
+
+/* .div1 img{
+  width: 100px; 
+  height:100px;
+  object-fit: contain;
+} */
+
+.div1 img.picture{
+  width: 100%; 
+  height:100%; 
+  /* width: 150px; 
+  height:150px;  */
+  object-fit: contain;
+  cursor: pointer;
+  
+}
+
+
+
+.div2 img.hand{
+  width: 100px; 
+  height:100px;
+  object-fit: contain;
+}
+
+.div3 img.hand2{
+  width: 100px; 
+  height:100px;
+  object-fit: contain;
+}
+.div1 img:hover {
+  opacity: 0.9.;
+}
+
+/* 自分の取り札置き場 */
+#win {
+  position:absolute;
+  bottom: 50px;
+  left: 150;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* ミニ絵札の画像 */
+#win li img{
+  max-width: 50px;
+  max-height:40x;
+}
+
+/* 相手の取り札置き場 */
+#win2 {
+  position: absolute;
+  top: 170px;
+  left: 150;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+/* ミニ絵札の画像 */
+#win2 li img{
+  max-width: 50px;
+  max-height:40x;
+}
+
+
+
+/* 一枚取った後の表示画面 */
+#touch {
+  position: absolute;
+  width: 120px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 300px;
+  left: 0px;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.001s;
+}
+
+#touch.hidden {
+  transform: translateY(-1400px);
+}
+
+#touch > p {
+  font-size: 18px;
+}
+#touchBtn,
+#result > a {
+  background: #3498db;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 0 #2880b9;
+  cursor: pointer;
+  transition: 1.05s;
+}
+
+#touchBtn:hover,
+#result > a:hover {
+  opacity: 0.8;
+}
+
+#touchImage,
+#resultImage {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+/* 結果表示（ポップアップ画面） */
+#result {
+  position: absolute;
+  width: 200px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 4px;
+  text-align: center;
+  transition: 1.1s;
+}
+
+#result.hidden {
+  transform: translateY(-1400px);
+}
+
+#result > p {
+  font-size: 24px;
+}
+
+#result > a {
+  display: block;
+  text-decoration: none;
+}
+
+
+
