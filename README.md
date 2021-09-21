@@ -1,1 +1,1 @@
-# karuta-test
+# My thanet karuta
